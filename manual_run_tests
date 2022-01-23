@@ -1,0 +1,11 @@
+Инструкция по запуску тестов с pytest:
+СПОСОБ 1
+1.Перейти в проект C:\Users\kirkingz\cfi_test
+2.Открыть терминал
+3.Ввести команду pytest base_operations.py -v
+Способ 2
+1. Перейти настройки в File -> Settings 
+2. Ввести в поиске Runner
+3. Выбрать Tools -> Python Integrated Tools
+4. В блоке Testing выбрать pytest
+5. Нажать правой кнопкой мыши на файл с тестами и выбрать run pytest или в верхнем меню зеленная кнопка play
