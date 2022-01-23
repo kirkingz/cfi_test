@@ -1,23 +1,23 @@
 import pytest
 
-@pytest.fixture()
+@pytest.fixture(scope='function')
 def sum(a=3, b=2):
     """функция считает сумму двух значений a и b"""
     sum = a + b
     return sum
 
-@pytest.fixture()
+@pytest.fixture(scope='session')
 def welcom(name='Артем'):
     """функция выводит привествие с задаваемым параметром name"""
     return print('Привет', name)
 
-@pytest.fixture()
+@pytest.fixture(scope='module')
 def draw_box(height=4, width=7):
     """функция рисует прямоугольник с параметрами height - высота, с - ширина"""
     for i in range(height):
         print('*' * width)
 
-@pytest.fixture()
+@pytest.fixture(scope='function')
 def list():
     """функция добавляет новое значение в список и выводит max и min значение в списке"""
     l = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -26,21 +26,21 @@ def list():
     print("Минимальное число в списке:",min(l))
     return l
 
-@pytest.fixture()
+@pytest.fixture(scope='session')
 def login_password():
     """функция выводит значения по ключу"""
     dict = {"ba": 2022, "Виктор": 1234, "max100500": 21031993}
     print(dict.get("ba"))
     return dict.get("ba")
 
-@pytest.fixture()
+@pytest.fixture(scope='module')
 def tup():
     """функция определяет количество вхождений определенного элемента в кортеже."""
     p_tup = (5,"Лондон", 101,"Пекин", 42, 3,"Москва", 101, 224,"Париж",101)
     print(p_tup.count(101))
     return p_tup.count(101)
 
-@pytest.fixture()
+@pytest.fixture(scope='function')
 def months():
     """функция соединяет два множества"""
     months_a = set(["Jan", "Feb", "March", "Apr", "May", "June"])
